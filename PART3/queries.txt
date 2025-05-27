@@ -87,8 +87,15 @@ where departments.name like "%matem%"
 #                   filtrare i tentativi con voto minimo 18.                   #
 # ---------------------------------------------------------------------------- #
 
->> select students.name, students.surname, COUNT(students.id) AS total_exams
+>> select students.id, students.name, students.surname,  COUNT(students.id) AS total_exams, MAX(exam_student.vote)
 from exam_student 
 join exams on exam_student.exam_id = exams.id
 join students on exam_student.student_id = students.id
-group by students.name, students.surname
+group by students.id, students.name, students.surname
+
+>> select students.id, students.name, students.surname,  COUNT(students.id) AS total_exams, MAX(exam_student.vote)
+from exam_student 
+join exams on exam_student.exam_id = exams.id
+join students on exam_student.student_id = students.id
+group by students.id, students.name, students.surname
+having MAX(exam_student.vote) >= 18
