@@ -39,14 +39,14 @@
 #                          Corso di Laurea in Economia                         #
 # ---------------------------------------------------------------------------- #
 
->> select students.* from students join degrees on students.degree_id = degrees.id where degrees.department_id = 9
+>> select students.* from students join degrees on students.degree_id = degrees.id join departments on degrees.department_id = departments.id where departments.name LIKE "%econo%"
 
 # ---------------------------------------------------------------------------- #
 #                        6. Selezionare tutti i Corsi di                       #
 #              Laurea Magistrale del Dipartimento di Neuroscienze              #
 # ---------------------------------------------------------------------------- #
 
->>
+>> select degrees.* from degrees join departments on degrees.department_id = departments.id where departments.name LIKE "%neuro%"
 
 # ---------------------------------------------------------------------------- #
 #       7. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)       #
