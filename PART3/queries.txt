@@ -66,7 +66,7 @@
 #   9. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti   #
 # ---------------------------------------------------------------------------- #
 
->>
+>> select courses.*, course_teacher.*, teachers.name, teachers.surname from courses join course_teacher on courses.id = course_teacher.course_id join teachers on course_teacher.teacher_id = teachers.id
 
 # ---------------------------------------------------------------------------- #
 #                10. Selezionare tutti i docenti che insegnano                 #
