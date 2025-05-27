@@ -73,7 +73,13 @@
 #                      nel Dipartimento di Matematica (54)                     #
 # ---------------------------------------------------------------------------- #
 
->>
+>> select courses.*, course_teacher.*, teachers.name, teachers.surname , degrees.name, degrees.department_id, departments.name
+from courses 
+join course_teacher on courses.id = course_teacher.course_id
+join teachers on course_teacher.teacher_id = teachers.id
+join degrees on courses.degree_id = degrees.id
+join departments on degrees.department_id = departments.id
+where departments.name like "%matem%"
 
 # ---------------------------------------------------------------------------- #
 #  11. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti   #
