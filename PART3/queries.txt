@@ -52,7 +52,7 @@
 #       7. Selezionare tutti i corsi in cui insegna Fulvio Amato (id=44)       #
 # ---------------------------------------------------------------------------- #
 
->>
+>> select course_teacher.*, teachers.name, teachers.surname from course_teacher join teachers on course_teacher.teacher_id = teachers.id where teachers.id = 44
 
 # ---------------------------------------------------------------------------- #
 #           8. Selezionare tutti gli studenti con i dati relativi al           #
@@ -60,7 +60,7 @@
 #                    in ordine alfabetico per cognome e nome                   #
 # ---------------------------------------------------------------------------- #
 
->>
+>> 
 
 # ---------------------------------------------------------------------------- #
 #   9. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti   #
