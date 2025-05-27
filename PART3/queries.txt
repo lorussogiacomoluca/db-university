@@ -60,7 +60,7 @@
 #                    in ordine alfabetico per cognome e nome                   #
 # ---------------------------------------------------------------------------- #
 
->> 
+>> select students.*, degrees.name from students join degrees on students.degree_id = degrees.id ORDER BY students.surname ASC, students.name ASC;
 
 # ---------------------------------------------------------------------------- #
 #   9. Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti   #
