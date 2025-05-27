@@ -35,3 +35,7 @@ Modellizzare la struttura di un database per memorizzare tutti i dati riguardant
 
 📤 **Cosa consegnare?**  
 Dopo aver testato le vostre query con **MySQL Workbench**, riportatele in un **file `.txt`** e caricatelo nella vostra **repo**.
+
+## 📘 Parte 3
+
+📂 Utilizzando lo stesso database di ieri, eseguite le query in allegato. Caricate un secondo file nella stessa repo di ieri (db-university) con le query di oggi. 🧠💾
